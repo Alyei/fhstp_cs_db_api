@@ -4,8 +4,6 @@ import os
 import simplejson
 from boto3.dynamodb.conditions import Key
 
-os.environ["AWS_SHARED_CREDENTIALS_FILE"] = "./.credentials"
-
 dynamodb = boto3.resource('dynamodb', region_name='eu-central-1')
 table = dynamodb.Table('Items')
 
